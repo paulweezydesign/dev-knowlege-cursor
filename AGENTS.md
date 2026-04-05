@@ -1,19 +1,32 @@
 # AGENTS.md
 
+## Project overview
+
+Next.js 16 application with React 19, TypeScript, Tailwind CSS v4, and shadcn/ui (base-nova style). Uses pnpm as the package manager.
+
 ## Cursor Cloud specific instructions
 
-This repository (dev-knowledge-cursor) is currently an empty/skeleton project with only a README.md. As of the initial setup:
+### Stack
 
-- **No application code, services, or dependencies exist.**
-- **No package manager lockfiles or dependency manifests** (`package.json`, `requirements.txt`, etc.) are present.
-- **No build, lint, or test configurations** are defined.
-- **No Docker, devcontainer, or CI/CD configuration** exists.
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **UI**: React 19, Tailwind CSS v4, shadcn/ui
+- **Language**: TypeScript 5
+- **Package manager**: pnpm (lockfile: `pnpm-lock.yaml`)
 
-### When code is added
+### Common commands
 
-Once source code and dependency files are introduced, future agents should:
+| Action | Command |
+|--------|---------|
+| Install deps | `pnpm install` |
+| Dev server | `pnpm dev` (runs on port 3000 with Turbopack) |
+| Lint | `pnpm lint` |
+| Build | `pnpm build` |
+| Production start | `pnpm start` |
+| Add shadcn component | `pnpm dlx shadcn@latest add <component>` |
 
-1. Identify the package manager from the lockfile (e.g., package-lock.json → npm, yarn.lock → yarn, pnpm-lock.yaml → pnpm, bun.lockb → bun, requirements.txt → pip).
-2. Install dependencies accordingly.
-3. Check `README.md` and any docs for updated build/run/test instructions.
-4. Create or update the VM environment update script via SetupVmEnvironment if new dependencies are introduced.
+### Notes
+
+- shadcn/ui config lives in `components.json` at the repo root. Components install to `src/components/ui/`.
+- Tailwind v4 uses CSS-first configuration via `src/app/globals.css` — there is no `tailwind.config.ts`.
+- Path alias `@/*` maps to `./src/*` (configured in `tsconfig.json`).
+- The dev server uses Turbopack by default (via `next dev`). Hot reloading is fast; no restart needed for most source changes.
