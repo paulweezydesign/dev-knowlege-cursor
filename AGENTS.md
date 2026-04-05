@@ -2,7 +2,7 @@
 
 ## Cursor Cloud specific instructions
 
-This repository (`dev-knowlege-cursor`) is currently an empty/skeleton project with only a `README.md`. As of the initial setup:
+This repository (dev-knowledge-cursor) is currently an empty/skeleton project with only a README.md. As of the initial setup:
 
 - **No application code, services, or dependencies exist.**
 - **No package manager lockfiles or dependency manifests** (`package.json`, `requirements.txt`, etc.) are present.
