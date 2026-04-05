@@ -16,4 +16,4 @@ Once source code and dependency files are introduced, future agents should:
 1. Identify the package manager from the lockfile (e.g., package-lock.json → npm, yarn.lock → yarn, pnpm-lock.yaml → pnpm, bun.lockb → bun, requirements.txt → pip).
 2. Install dependencies accordingly.
 3. Check `README.md` and any docs for updated build/run/test instructions.
-4. Update the VM environment update script via `SetupVmEnvironment` if new dependencies are introduced.
+4. Create or update the VM environment update script via SetupVmEnvironment if new dependencies are introduced.
