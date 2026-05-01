@@ -1,0 +1,340 @@
+# Instincts generated from https://github.com/paulweezydesign/dev-knowlege-cursor
+# Generated: 2026-05-01T18:02:40.640Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: dev-knowlege-cursor-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: build AgencyOS dashboard with sidebar navigation and core pages
+
+---
+id: dev-knowlege-cursor-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Commit Length
+
+## Action
+
+Write moderate-length commit messages (~69 characters)
+
+## Evidence
+
+- Average commit message length: 69 chars
+- Based on 1 commits
+
+---
+id: dev-knowlege-cursor-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: dev-knowlege-cursor-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: dev-knowlege-cursor-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: dev-knowlege-cursor-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: app, components, hooks, lib
+
+---
+id: dev-knowlege-cursor-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: dev-knowlege-cursor-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct File Naming
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Files in src/components use camelCase
+
+---
+id: dev-knowlege-cursor-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Function Naming
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: dev-knowlege-cursor-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: dev-knowlege-cursor-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: dev-knowlege-cursor-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle: alias
+
+---
+id: dev-knowlege-cursor-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Export Style
+
+## Action
+
+Use mixed export style (named and default exports as appropriate)
+
+## Evidence
+
+- Pattern in exportStyle: mixed
+
+---
+id: dev-knowlege-cursor-instinct-git-commit-format
+trigger: "When writing a git commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Git Commit Format
+
+## Action
+
+Use conventional commit format with 'feat' prefix for features
+
+## Evidence
+
+- Seen in commit: 'feat: build AgencyOS dashboard with sidebar navigation and core pages'
+- Pattern in commits.prefixes
+
+---
+id: dev-knowlege-cursor-instinct-git-commit-length
+trigger: "When writing a git commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 69 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: dev-knowlege-cursor-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Test Location
+
+## Action
+
+Place test files in a separate location from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: dev-knowlege-cursor-instinct-src-folder-usage
+trigger: "When adding new code modules"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: paulweezydesign/dev-knowlege-cursor
+---
+
+# Dev Knowlege Cursor Instinct Src Folder Usage
+
+## Action
+
+Place code inside the 'src' folder, organized by type (e.g., components, hooks, lib, app)
+
+## Evidence
+
+- Pattern in architecture.folderStructure.commonFolders
+- Pattern in architecture.folderStructure.srcLayout
+
