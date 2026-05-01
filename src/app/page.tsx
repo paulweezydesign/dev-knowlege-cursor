@@ -150,11 +150,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button>
+              <Button render={<a href="#priorities" />}>
                 <BellRing data-icon="inline-start" />
                 Review approvals
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" render={<a href="#pipeline" />}>
                 Open workspace map
                 <ArrowRight data-icon="inline-end" />
               </Button>
@@ -183,7 +183,7 @@ export default function Home() {
 
         <div className="grid gap-6 xl:grid-cols-[1.4fr_0.9fr]">
           <div className="flex flex-col gap-6">
-            <Card>
+            <Card id="priorities">
               <CardHeader className="flex flex-col gap-2 border-b">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex flex-col gap-1">
@@ -212,17 +212,16 @@ export default function Home() {
                       <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                         {priority.owner}
                       </p>
-                      <Button variant="ghost" size="sm">
-                        Open item
-                        <ArrowRight data-icon="inline-end" />
-                      </Button>
+                      <p className="text-sm font-medium text-muted-foreground">
+                        Workflow handoff queued
+                      </p>
                     </div>
                   </article>
                 ))}
               </CardContent>
             </Card>
 
-            <Card>
+            <Card id="pipeline">
               <CardHeader className="flex flex-col gap-2 border-b">
                 <div className="flex items-center gap-2">
                   <BriefcaseBusiness className="text-muted-foreground" />
@@ -246,9 +245,9 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-sm leading-6 text-muted-foreground">{project.scope}</p>
-                    <Button variant="outline" size="sm">
-                      Open workspace
-                    </Button>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      Workspace routing comes next
+                    </p>
                   </article>
                 ))}
               </CardContent>
