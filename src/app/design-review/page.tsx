@@ -91,7 +91,7 @@ export default function DesignReviewPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             {featured.comments.map((comment, i) => {
-              const pinIndex = comment.pinX != null ? i + 1 : null;
+              const pinIndex = featuredPins.find((p) => p.x === comment.pinX && p.y === comment.pinY)?.index;
               return (
                 <div key={comment.id} className="flex gap-3">
                   <Avatar className="size-8">
