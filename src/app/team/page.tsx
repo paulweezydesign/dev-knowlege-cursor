@@ -22,9 +22,9 @@ const roleLabels = {
 } as const;
 
 export default function TeamPage() {
-  const avgUtilization = Math.round(
-    team.reduce((s, p) => s + (p.utilization ?? 0), 0) / team.length
-  );
+  const avgUtilization = team.length > 0
+    ? Math.round(team.reduce((s, p) => s + (p.utilization ?? 0), 0) / team.length)
+    : 0;
   const overallocated = team.filter((p) => (p.utilization ?? 0) >= 90).length;
   const underutilized = team.filter((p) => (p.utilization ?? 0) < 60).length;
 
